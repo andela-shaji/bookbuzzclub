@@ -6,6 +6,7 @@ This is an application that is used to manage the operations of BookBuzz Club. M
 
 The application implements several classes that define the properties and operations of the Club. 
 
+
 #### BookBuzzClub Class
 This is the main class that manages the interdependence between between the members and the books and the activities it does perform include:
 - Add new members and books to the club.
@@ -33,7 +34,7 @@ This class defines properties and behaviors that are specific to the staff membe
 #### Student Class
 Similar to Staff Class, this class defines properties and behaviors that are specific to the student members and extends the Member Class.
 
-## Contributing
+# Contributing
 
 Contributions are welcome and will be fully credited.
 
