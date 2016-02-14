@@ -32,3 +32,9 @@ This class defines properties and behaviors that are specific to the staff membe
 
 #### Student Class
 Similar to Staff Class, this class defines properties and behaviors that are specific to the student members and extends the Member Class.
+
+### Contributing
+
+Contributions are welcome and will be fully credited.
+
+We accept contributions via Pull Requests on [Github]: <https://github.com/andela-shaji/bookbuzzclub>.
