@@ -37,4 +37,7 @@ Similar to Staff Class, this class defines properties and behaviors that are spe
 
 Contributions are welcome and will be fully credited.
 
-We accept contributions via Pull Requests on [Github]: <https://github.com/andela-shaji/bookbuzzclub>.
+We accept contributions via Pull Requests on [Github] .
+
+
+[Github]: <https://github.com/andela-shaji/bookbuzzclub>
