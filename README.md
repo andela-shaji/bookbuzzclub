@@ -1,4 +1,4 @@
- # BookBuzz Club
+# BookBuzzClub Club
 
 This is an application that is used to manage the operations of BookBuzz Club. Members are placed into two lists, one for students and another for staff. Their priority depends on:
 - The **rank**, i.e if two members are requesting for the same book at the same time, staff will have a higher precedence to a student.
