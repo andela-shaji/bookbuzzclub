@@ -6,6 +6,7 @@ import andela.checkpoint1.main.*;
 /**
  * Created by suadahaji.
  */
+
 public class Student extends Member {
 
     private int studentRegNumber;

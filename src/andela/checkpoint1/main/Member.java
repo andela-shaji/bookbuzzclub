@@ -1,11 +1,12 @@
 package andela.checkpoint1.main;
 
-import java.util.Comparator;
-import java.util.Date;
+import java.util.*;
 import andela.checkpoint1.members.*;
+
 /**
  * Created by suadahaji.
  */
+
 public class Member {
 
     private String firstName;

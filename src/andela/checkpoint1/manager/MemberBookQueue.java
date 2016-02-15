@@ -6,6 +6,7 @@ import andela.checkpoint1.main.Member;
 /**
  * Created by suadahaji.
  */
+
 public class MemberBookQueue {
     private PriorityQueue<Member> queue;
 

@@ -1,12 +1,12 @@
 package andela.checkpoint1.manager;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import andela.checkpoint1.main.*;
 
 /**
  * Created by suadahaji.
  */
+
 public class BookBuzzClub {
     ArrayList<Book> booklist;
     ArrayList<Member> memberList;
