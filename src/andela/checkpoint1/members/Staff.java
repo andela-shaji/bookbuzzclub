@@ -5,7 +5,9 @@ import andela.checkpoint1.main.*;
 /**
  * Created by suadahaji.
  */
+
 public class Staff extends Member {
+
     private String staffId;
     private Double salary;
 
