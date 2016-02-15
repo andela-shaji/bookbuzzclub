@@ -6,7 +6,9 @@ import andela.checkpoint1.members.*;
 /**
  * Created by suadahaji.
  */
-public class Member {private String firstName;
+public class Member {
+
+    private String firstName;
     private String lastName;
     private String email;
     private Date dateOfMembership;
@@ -56,6 +58,7 @@ public class Member {private String firstName;
 
         @Override
         public int compare(Member member1, Member member2) {
+
             if (member1.getClass() == member2.getClass()) {
                 return member1.getDateOfMembership().compareTo(member2.getDateOfMembership());
             }
