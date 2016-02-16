@@ -8,11 +8,12 @@ import andela.checkpoint1.main.*;
  */
 
 public class BookBuzzClub {
-    ArrayList<Book> booklist;
-    ArrayList<Member> memberList;
-    HashMap<String, MemberBookQueue> booksBorrowed;
+   private ArrayList<Book> booklist;
+   private ArrayList<Member> memberList;
+   private HashMap<String, MemberBookQueue> booksBorrowed;
 
     public BookBuzzClub() {
+
         booklist = new ArrayList<Book>();
         memberList = new ArrayList<Member>();
         booksBorrowed = new HashMap<String, MemberBookQueue>();
@@ -30,6 +31,10 @@ public class BookBuzzClub {
         return booksBorrowed.size();
     }
 
+    public int getBookPosition(Book book) {
+        return booklist.indexOf(book);
+    }
+
     /**
      * Return a list of books in the club.
      */
@@ -45,19 +50,19 @@ public class BookBuzzClub {
         return this.memberList;
     }
 
-    public void addBookToClub(Book addBook) {
+    public void addBookToClub(Book newBook) {
         for (Book book: this.booklist) {
-            if (book == addBook) {
-                book.increaseBookNumberByCopies(addBook.getNumberOfCopies());
+            if (book == newBook) {
+                book.increaseBookNumberByCopies(newBook.getNumberOfCopies());
                 return;
             }
         }
-        booklist.add(addBook);
+        booklist.add(newBook);
     }
 
-    public void addMemberToClub(Member addMember) {
-        if(!isAMember(addMember)) {
-            memberList.add(addMember);
+    public void addMemberToClub(Member newMember) {
+        if(!isAMember(newMember)) {
+            memberList.add(newMember);
         }
     }
 
@@ -65,7 +70,7 @@ public class BookBuzzClub {
      * Borrower requesting book from club.
      */
 
-    public void recieveBookRequest(Book requestedBook, Member requestingMember) {
+    public void receiveBookRequest(Book requestedBook, Member requestingMember) {
         if (isAMember(requestingMember) && checkBookAvailability(requestedBook)) {
 
             addMemberToQueue(requestedBook, requestingMember);
@@ -76,8 +81,8 @@ public class BookBuzzClub {
 
     public void addMemberToQueue(Book requestedBook, Member requestingMember) {
         String bookTitle = requestedBook.getBookTitle();
-        if (booksBorrowed.containsKey(bookTitle)) {
-            MemberBookQueue queue =getRequestQueue(bookTitle);
+        if (isRequestedBookInQueue(requestedBook)) {
+            MemberBookQueue queue = getRequestQueue(bookTitle);
             queue.addMemberToQueue(requestingMember);
         } else {
             MemberBookQueue queueBook = new MemberBookQueue();
@@ -87,7 +92,7 @@ public class BookBuzzClub {
     }
 
     /**
-     * Grant book to borrower and determine who's the borrower
+     * Grant book to borrower
      */
 
     public void grantBookToMember(Book requestedBook) {
@@ -112,5 +117,9 @@ public class BookBuzzClub {
 
     public boolean checkBookAvailability(Book requestedBook) {
         return booklist.contains(requestedBook);
+    }
+
+    public boolean isRequestedBookInQueue(Book requestedBook) {
+        return booksBorrowed.containsKey(requestedBook.getBookTitle());
     }
 }
